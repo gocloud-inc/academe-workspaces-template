@@ -45,7 +45,7 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: inherit;
+        color: var(--color-primary);
     }
 }
 
