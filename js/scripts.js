@@ -6,20 +6,24 @@ document.addEventListener('DOMContentLoaded', function() {
     let passwordBtn = document.getElementById('password-btn');
     let passwordIcon = document.getElementById('password-icon');
 
-    passwordBtn.addEventListener('click', () => {
-        if (passwordEl.type === 'password') {
-            passwordEl.type = 'text';
-            passwordIcon.innerHTML = 'visibility_off';
-        } else {
-            passwordEl.type = 'password';
-            passwordIcon.innerHTML = 'visibility';
-        }
-    });
+    if (passwordBtn) {
+        passwordBtn.addEventListener('click', () => {
+            if (passwordEl.type === 'password') {
+                passwordEl.type = 'text';
+                passwordIcon.innerHTML = 'visibility_off';
+            } else {
+                passwordEl.type = 'password';
+                passwordIcon.innerHTML = 'visibility';
+            }
+        });
+    }
 
     let formEl = document.getElementById('form');
     let clearFormBtn = document.getElementById('clear-form');
 
-    clearFormBtn.addEventListener('click',  () => {
-        formEl.reset();
-    });
+    if (clearFormBtn) {
+        clearFormBtn.addEventListener('click',  () => {
+            formEl.reset();
+        });
+    }
 });
