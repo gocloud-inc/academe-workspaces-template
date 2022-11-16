@@ -5,11 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
     // Page Loader
-    document.addEventListener('DOMContentLoaded', function() {
-        window.addEventListener('beforeunload', (e) => {
-            document.body.className = "page-loading";
-        }, false);
-    });
+    // window.addEventListener('beforeunload', (e) => {
+    //     document.body.className = "page-loading";
+    // }, false);
 
     // Password Visibility
     let passwordEl = document.querySelectorAll('.password');
@@ -69,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (localStorage.getItem('isDarkMode') == 'true') {     
             document.body.classList.toggle('dark-theme');
+            themeIconSwitcher.innerHTML = 'dark_mode';
         }
     }
 });

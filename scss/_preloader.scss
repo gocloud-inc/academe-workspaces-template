@@ -24,7 +24,7 @@
 .page-loading {
     &::after {
         content:" ";
-        background: rgba(var(--color-light-rgb), 0.6);
+        background: rgba(var(--color-card-rgb), 0.5);
         position: fixed;
         width: 100%;
         height: 100%;
