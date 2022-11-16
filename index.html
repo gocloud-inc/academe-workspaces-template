@@ -17,7 +17,6 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <section class="background-overlay" style="background-image: url('assets/svg/academe-hero-banner.svg')">
@@ -25,7 +24,7 @@
             <div class="row align-items-center justify-content-between g-5 position-relative">
                 <div class="col-xl-6 col-lg-6">
                     <div class="text-align-sm-center">
-                        <img src="assets/logo-academe-sms.png" height="45" alt="">
+                        <img src="assets/logo-academe-sms.png" class="academe-sms-logo" height="45" alt="">
                         <div class="font-size-40 font-weight-800 mt-1">School Management System (SMS) K12 Workspaces</div>
                         <p class="font-size-20 mt-2">Be equipped to make well-informed business decisions and increase data processing efficiency.</p>
                     </div>
@@ -55,7 +54,7 @@
                                             </div>
                                             <div class="me-0">
                                                 <div class="font-size-16 font-weight-600">System</div>
-                                                <div class="font-size-14 text-muted">School settings & Employee settings</div>
+                                                <div class="font-size-14 text-color-dark">School settings & Employee settings</div>
                                             </div>
                                         </div>
                                     </div>
@@ -72,7 +71,7 @@
                                             </div>
                                             <div class="me-0">
                                                 <div class="font-size-16 font-weight-600">Student & Parent Portal</div>
-                                                <div class="font-size-14 text-muted">View the student’s information, fees, schedules and grades</div>
+                                                <div class="font-size-14 text-color-dark">View the student’s information, fees, schedules and grades</div>
                                             </div>
                                         </div>
                                     </div>
@@ -89,7 +88,7 @@
                                             </div>
                                             <div class="me-0">
                                                 <div class="font-size-16 font-weight-600">Admission</div>
-                                                <div class="font-size-14 text-muted">Official student documents and government required reports</div>
+                                                <div class="font-size-14 text-color-dark">Official student documents and government required reports</div>
                                             </div>
                                         </div>
                                     </div>
@@ -106,7 +105,7 @@
                                             </div>
                                             <div class="me-0">
                                                 <div class="font-size-16 font-weight-600">New Student Registration</div>
-                                                <div class="font-size-14 text-muted">Enrollment portal for new students only</div>
+                                                <div class="font-size-14 text-color-dark">Enrollment portal for new students only</div>
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +122,7 @@
                                             </div>
                                             <div class="me-0">
                                                 <div class="font-size-16 font-weight-600">Continuing Student</div>
-                                                <div class="font-size-14 text-muted">For students enrolled in the previous school year</div>
+                                                <div class="font-size-14 text-color-dark">For students enrolled in the previous school year</div>
                                             </div>
                                         </div>
                                     </div>
@@ -135,6 +134,10 @@
             </div>
         </div>
     </section>
+
+    <button type="button" class="button-secondary circle md shadow-sm position-fixed bottom-0 right-0 my-5 mx-5 theme-btn-switcher">
+        <span class="material-icons-outlined theme-icon-switcher">light_mode</span>
+    </button>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
