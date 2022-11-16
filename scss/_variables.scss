@@ -71,6 +71,14 @@
 	--color-light-shade: #e0e0e0;
 	--color-light-tint: #f7f7f7;
 
+	// Card
+	--color-card: #ffffff;
+	--color-card-rgb: 255,255,255;
+	--color-card-contrast: #000000;
+	--color-card-contrast-rgb: 0,0,0;
+	--color-card-shade: #e0e0e0;
+	--color-card-tint: #f7f7f7;
+
     // Font
     --font-serif: 'Inter', sans-serif;
 }
@@ -109,12 +117,20 @@ body.dark-theme {
 	--color-medium-tint: #a2a4ab;
 
 	// Light
-	--color-light: #2b2a2a;
-	--color-light-rgb: 37,38,39;
+	--color-light: #000000;
+	--color-light-rgb: 0,0,0;
 	--color-light-contrast: #ffffff;
 	--color-light-contrast-rgb: 255,255,255;
-	--color-light-shade: #212122;
-	--color-light-tint: #222529;
+	--color-light-shade: #000000;
+	--color-light-tint: #1a1a1a;
+
+	// Card
+	--color-card: #1d2226;
+	--color-card-rgb: 29,34,38;
+	--color-card-contrast: #ffffff;
+	--color-card-contrast-rgb: 255,255,255;
+	--color-card-shade: #1a1e21;
+	--color-card-tint: #34383c;
 
 	img {
 		filter: brightness(.8) contrast(1.2);
