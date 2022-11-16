@@ -28,3 +28,11 @@ $text-aligns: (
         }
     }
 }
+
+// Text Alignment 
+
+@include sm {
+    .text-align-sm-center {
+        text-align: center;
+    }
+}
