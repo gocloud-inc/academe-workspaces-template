@@ -9,7 +9,7 @@ To install this project just follow the process chronologically.
 Clone the project via HTTPS
 
 ```bash
-git clone https://github.com/Majotech/gui-builder.git
+git clone https://github.com/GitMarkPaul/academe-template.git
 ```
 ## Configuration
 
