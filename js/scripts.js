@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
     // Page Loader
-    // window.addEventListener('beforeunload', (e) => {
-    //     document.body.className = "page-loading";
-    // }, false);
+    window.addEventListener('beforeunload', (e) => {
+        document.body.className = "page-loading";
+    }, false);
 
     // Password Visibility
     let passwordEl = document.querySelectorAll('.password');
@@ -69,5 +69,27 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.toggle('dark-theme');
             themeIconSwitcher.innerHTML = 'dark_mode';
         }
+    }
+
+    // Sidebar
+    let sidebarToggler = document.getElementById('sidebar-toggler');
+    let asideEl = document.getElementById('aside');
+
+    if (sidebarToggler) {
+        sidebarToggler.addEventListener('click', () => {
+            asideEl.classList.add('show-aside');
+            asideEl.classList.remove('hide-aside');
+
+            let asideDivOverlay = document.createElement('div');
+        
+            asideDivOverlay.className = 'shadow-overlay'; 
+            document.getElementsByTagName('body')[0].appendChild(asideDivOverlay);
+
+            asideDivOverlay.addEventListener('click', () => {
+                asideEl.classList.add('hide-aside');
+                document.getElementsByTagName('body')[0].removeChild(asideDivOverlay);
+            });
+        
+        });
     }
 });

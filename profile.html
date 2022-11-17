@@ -22,18 +22,21 @@
     <div id="app">
         <header>
             <nav>
-                <a href="dashboard.html" class="d-flex align-items-center gap-2">
+                <button type="button" class="button-link-dark circle" id="sidebar-toggler">
+                    <span class="material-symbols-rounded">menu</span>
+                </button>
+                <a href="dashboard.html" class="d-flex align-items-center gap-2" id="school-logo">
                     <img class="brand-logo" src="assets/logo/edsci-logo.png" alt="">
                     <div class="font-size-16 font-weight-600">Escuela de Sophia of Caloocan, Inc.</div>
                 </a>
                 <ul class="navmenu">
-                    <li class="nav-item">
+                    <li class="nav-item nav-sm-none">
                         <a class="button-link-dark">
                             <span class="material-symbols-rounded font-size-20">flag</span>
                             First Quarter
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item nav-sm-none">
                         <a class="button-link-dark">
                             <span class="material-symbols-rounded font-size-20">today</span>
                             SY: 2022 - 2023
@@ -42,7 +45,7 @@
                     <li class="nav-item dropdown">
                         <a role="button" class="d-flex align-items-center gap-2" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="initial-circle-xs background-color-primary">J</div>
-                            <div class="font-size-14 font-weight-600">Jhoaquin James S. Abad</div>
+                            <div class="font-size-14 font-weight-600 nav-username">Jhoaquin James S. Abad</div>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="profile.html"><span class="material-symbols-rounded">account_circle</span> Profile</a></li>
@@ -56,7 +59,7 @@
             </nav>
         </header>
 
-        <aside>
+        <aside id="aside">
             <ul class="side-menu">
                 <li class="side-item">
                     <div class="d-flex align-items-center background-color-success rounded-4 gap-3 py-2 px-3">
@@ -166,7 +169,7 @@
                     </div>
                     <div class="col-xl-12">
                         <div class="row g-4">
-                            <div class="col-4">
+                            <div class="col-xl-4">
                                 <div class="list-group card border-0" id="list-tab" role="tablist">
                                     <a class="list-group-item list-group-item-action py-2 px-3 d-flex align-items-center gap-3 active" id="list-student-info-list" data-bs-toggle="list" href="#list-student-info" role="tab" aria-controls="list-student-info">
                                         <div class="initial-circle-sm rounded-4 background-accent-dark">
@@ -212,7 +215,7 @@
                                     </a>
                                 </div>
                             </div>
-                            <div class="col-8">
+                            <div class="col-xl-8">
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="list-student-info" role="tabpanel" aria-labelledby="list-student-info-list">
                                         <div class="row g-3">
