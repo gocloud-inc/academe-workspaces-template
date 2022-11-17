@@ -85,7 +85,7 @@ label, .form-label {
 
 .form-check-input {
     transition: all 0.2s ease;
-    background-color: var(--color-medium);
+    background-color: rgba(var(--color-dark-rgb), 0.05);
 	cursor: pointer;
 	padding: 0.5rem;
     width: 1.3em;

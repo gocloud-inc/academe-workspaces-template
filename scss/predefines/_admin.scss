@@ -43,11 +43,15 @@ $default-transition: all 0.2s ease !default;
             "main main main"
             "main main main";
     }
+
+    .material-icons-outlined {
+        color: rgba(var(--color-dark-rgb), 0.8);
+    }
     
     header { 
         grid-area: header;
         border-bottom: $default-border;
-        background: var(--color-light);
+        background: var(--color-card);
         position: sticky;
         top: 0; 
         padding: 0 12px;
@@ -55,13 +59,17 @@ $default-transition: all 0.2s ease !default;
         align-items: center;
         justify-content: flex-end;
         transition: $default-transition;
-        height: 60px;
+        height: 55px;
         z-index: 3;
         
         nav {
             display: grid;
             grid-template-columns: 1fr auto auto;
             width: 100%;
+
+            .brand-logo {
+                width: 32px;
+            }
 
             .navmenu {
                 margin: 0;
@@ -80,12 +88,10 @@ $default-transition: all 0.2s ease !default;
     aside { 
         grid-area: aside;
         border-right: $default-border;
-        background: rgba(var(--color-secondary-rgb), 0.4);
         overflow: auto;
-        transition: $default-transition;
         z-index: 2;
         padding: 12px;
-        width: 250px;
+        width: 260px;
         height: 100%;
 
         @media (max-width: 1400px) {
@@ -119,7 +125,6 @@ $default-transition: all 0.2s ease !default;
 
             .side-item {
                 position: relative;
-                transition: $default-transition;
 
                 .side-link.active {
                     @extend %defaultActiveState;
@@ -138,6 +143,7 @@ $default-transition: all 0.2s ease !default;
                 }
                 
                 .side-text {
+                    font-size: 14px;
                     @media (max-width: 1024px) {
                         display: none;
                     }
@@ -162,7 +168,6 @@ $default-transition: all 0.2s ease !default;
                             padding-left: 2.8rem;
                             border-radius: 8px;
                             color: var(--color-dark);
-                            transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
 
                             &:hover {
                                 @extend %defaultLinkHoverState;

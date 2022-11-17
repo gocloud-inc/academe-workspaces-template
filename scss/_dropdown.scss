@@ -1,9 +1,10 @@
 .dropdown-menu {
-    background: var(--color-light);
+    background: var(--color-card);
     margin-top: 1rem !important;
     padding: 0;
 
     .dropdown-item {
+        font-size: 14px;
         color: var(--color-dark);
         display: flex;
         align-items: center;

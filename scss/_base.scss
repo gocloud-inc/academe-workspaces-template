@@ -11,7 +11,7 @@ html {
 body {
     font-family: var(--font-serif);
     font-size: 15px;
-    background: var(--color-light);
+    background: var(--color-light-tint);
     color: var(--color-dark);
     margin: 0;
     line-height: 1.5;
@@ -45,7 +45,7 @@ a {
     text-decoration: none;
 
     &:hover {
-        color: var(--color-primary);
+        color: inherit;
     }
 }
 
