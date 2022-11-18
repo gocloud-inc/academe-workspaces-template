@@ -47,7 +47,7 @@ $default-transition: all 0.2s ease !default;
 
     @media (max-width: 640px) {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 0.3fr 1.7fr 1fr;
+        grid-template-rows: 0.1fr 1.7fr 1fr;
         grid-template-areas: 
             "header header header"
             "main main main"
@@ -237,7 +237,7 @@ $default-transition: all 0.2s ease !default;
         overflow: auto;
 
         @media (max-width: 600px) {
-            padding: 12px;
+            padding: 12px 4px;
         }
     }
 }
