@@ -92,4 +92,35 @@ document.addEventListener('DOMContentLoaded', function() {
         
         });
     }
+
+    // Sidebar has-children Class
+    let hasChildrenEl = document.getElementsByClassName('side-item');
+    let sideMenuCollapseEl = document.querySelectorAll('.side-menu-collapse');
+
+    // if (hasChildrenEl) {
+    //     hasChildrenEl.forEach((element, index) => {
+    //         element.addEventListener('click', () => {
+    //             sideMenuCollapseEl.forEach((e) => {
+    //                 e.classList.toggle('show');
+    //             });
+    //         });
+    //     });
+    // }
+
+    var i;
+
+    for (i = 0; i < hasChildrenEl.length; i++) {
+        hasChildrenEl[i].addEventListener("click", function() {
+
+            sideMenuCollapseEl.forEach((e) => {
+                e.classList.toggle('show');
+            });
+
+            if (this.classList.contains("show")) {
+                this.classList.remove("show");
+            } else {
+                this.classList.add("show");
+            }
+        });
+    }
 });

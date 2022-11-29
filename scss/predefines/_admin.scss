@@ -168,10 +168,16 @@ $default-transition: all 0.2s ease !default;
             padding: 0;
 
             .side-item-header {
+                font-size: 14px;
                 padding: 12px 12px 2px;
                 font-weight: 500;
-                color: rgba(var(--color-dark-rgb), 0.6);
+                color: rgba(var(--color-dark-rgb), 0.5);
             }
+
+            .show > .side-menu-collapse {
+                display: grid;
+            }
+
 
             .side-item {
                 position: relative;
@@ -191,34 +197,35 @@ $default-transition: all 0.2s ease !default;
                         @extend %defaultLinkHoverState;
                     }
                 }
+
+                .material-symbols-rounded {
+                    font-size: 21px;
+                }
                 
                 .side-text {
-                    font-size: 14px;
+                    font-size: 13px;
                 }
 
-                .collapse {
-                    padding-top: 0;
-                    padding-bottom: 0;
+                .side-menu-collapse {
+                    display: none;
+                    grid-gap: 0.1rem;
+                    padding: 2px 0;
+                    @extend %scale-up-ver-top;
                     
-                    .collapse-menu, .list-group {
-                        display: grid;
-                        grid-gap: 0.2rem;
-                        padding: 2px 0;
-                        
-                        .collapse-item.active, .list-group-item.active {
-                            @extend %defaultActiveState;
-                        }
-                        
-                        .collapse-item, .list-group-item {
-                            padding-top: 7px;
-                            padding-bottom: 7px;
-                            padding-left: 2.8rem;
-                            border-radius: 8px;
-                            color: var(--color-dark);
+                    .collapse-item.active {
+                        @extend %defaultActiveState;
+                    }
+                    
+                    .collapse-item {
+                        font-size: 13px;
+                        padding-top: 6px;
+                        padding-bottom: 6px;
+                        padding-left: 2.8rem;
+                        border-radius: 8px;
+                        color: var(--color-dark);
 
-                            &:hover {
-                                @extend %defaultLinkHoverState;
-                            }
+                        &:hover {
+                            @extend %defaultLinkHoverState;
                         }
                     }
                 }
@@ -291,6 +298,11 @@ $default-transition: all 0.2s ease !default;
 }
 
 // Animation
+%scale-up-ver-top {
+	-webkit-animation: scale-up-ver-top 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: scale-up-ver-top 0.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
 %slide-in-left {
 	-webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
@@ -300,6 +312,41 @@ $default-transition: all 0.2s ease !default;
 	-webkit-animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 	        animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+
+/**
+ * ----------------------------------------
+ * animation scale-up-ver-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  @keyframes scale-up-ver-top {
+    0% {
+      -webkit-transform: scaleY(0.4);
+              transform: scaleY(0.4);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+    }
+  }
+  
 
 /**
  * ----------------------------------------
