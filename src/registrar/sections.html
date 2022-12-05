@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Dashboard | Report On Promotions - Escuela de Sophia of Caloocan, Inc.</title>
+    <title>Registrar Dashboard | Sections - Escuela de Sophia of Caloocan, Inc.</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../assets/logo-academe-sms.png" type="image/x-icon">
     <!-- Fonts -->
@@ -150,7 +150,7 @@
                     </a>
                     
                     <div class="side-menu-collapse">
-                        <a href="report-on-promotions.html" class="collapse-item active">Report on Promotions</a>
+                        <a href="report-on-promotions.html" class="collapse-item">Report on Promotions</a>
                         <a href="cor-bath-print.html" class="collapse-item">COR Batch Print</a>
                         <a href="report-cards.html" class="collapse-item">Report Cards</a>
                         <a href="printables.html" class="collapse-item">Printables</a>
@@ -171,7 +171,7 @@
                         <a href="curriculum.html" class="collapse-item">Curriculum (Grade Level Subjects)</a>
                         <a href="tracks-and-strands.html" class="collapse-item">Tracks and Strands</a>
                         <a href="cards.html" class="collapse-item">Rooms</a>
-                        <a href="sections.html" class="collapse-item">Sections</a>
+                        <a href="sections.html" class="collapse-item active">Sections</a>
                         <a href="grade-level.html" class="collapse-item">Grade Level</a>
                         <a href="badge.html" class="collapse-item">Progress Report Settings</a>
                         <a href="errors.html" class="collapse-item">Migrate Curriculum Subjects</a>
@@ -243,32 +243,78 @@
                             <a href="registrar.html" class="bread-link">Dashboard</a>
                         </li>
                         <li class="bread-item">
-                            <a href="#" class="bread-link" aria-current="page">Reports & Records Section</a>
+                            <a href="#" class="bread-link" aria-current="page">Basic Education</a>
                         </li>
                         <li class="bread-item">
-                            <span class="bread-link" aria-current="page">Report On Promotions</span>
+                            <span class="bread-link" aria-current="page">Sections</span>
                         </li>
                     </ol>
-                    <h4>Report On Promotions</h4>
+                    <h4>Sections</h4>
                 </div>
-
                 <div class="row g-4 mt-4">
-                    <div class="col-xl-6">
-                        <div class="card text-center p-4">
-                            <div class="body">
-                                <div class="font-size-18 font-weight-600">Create Promotional Reports for Elementary</div>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque fuga repellendus similique rem repudiandae nulla nihil quos.</p>
-                                <a href="#" class="button-primary">Generate Elementary Promotions</a>
+                    <div class="col-xl-12">
+                        <form action="">
+                            <div class="row align-items-center justify-content-between g-3">
+                                <div class="col-xl-10">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option disabled selected>-- Choose Level --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <button type="submit" class="button-primary block">Filter Section</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="card text-center p-4">
-                            <div class="body">
-                                <div class="font-size-18 font-weight-600">Create Promotional Reports for High School</div>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque fuga repellendus similique rem repudiandae nulla nihil quos.</p>
-                                <a href="#" class="button-primary">Generate High School Promotions</a>
-                            </div>
+                    <div class="col-xl-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped mb-0 background-color-card">
+                                <thead>
+                                    <tr>
+                                        <th>Section Name</th>
+                                        <th>Grade Level Assigned</th>
+                                        <th>Section Adviser</th>
+                                        <th>Semester (For SR High)</th>
+                                        <th>Track (For SR High)</th>
+                                        <th>Strand (For SR High)</th>
+                                        <th>Remaining Slot</th>
+                                        <th>Maximum Slot</th>
+                                        <th>Schedule Added</th>
+                                        <th>Special</th>
+                                        <th class="text-center" width="7%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>MT. MAYON (BLOCK A)</td>
+                                        <td>Kinder 1</td>
+                                        <td>Guila A. Serrano</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>-</td>
+                                        <td>0</td>
+                                        <td>16</td>
+                                        <td>5</td>
+                                        <td>No</td>
+                                        <td class="text-center">
+                                            <div class="dropdown">
+                                                <button type="button" role="button" class="button-accent-primary circle sm" data-bs-toggle="dropdown" aria-expanded="false">
+                                                    <span class="material-symbols-rounded">more_horiz</span>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">info</span> Details</a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">edit</span> Edit</a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">calendar_month</span> Schedule</a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">calculate</span> Recalculate</a></li>
+                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">delete</span> Delete</a></li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>    
                         </div>
                     </div>
                 </div>

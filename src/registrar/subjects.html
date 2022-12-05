@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Dashboard | Report On Promotions - Escuela de Sophia of Caloocan, Inc.</title>
+    <title>Registrar Dashboard | Subjects - Escuela de Sophia of Caloocan, Inc.</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../assets/logo-academe-sms.png" type="image/x-icon">
     <!-- Fonts -->
@@ -150,7 +150,7 @@
                     </a>
                     
                     <div class="side-menu-collapse">
-                        <a href="report-on-promotions.html" class="collapse-item active">Report on Promotions</a>
+                        <a href="report-on-promotions.html" class="collapse-item">Report on Promotions</a>
                         <a href="cor-bath-print.html" class="collapse-item">COR Batch Print</a>
                         <a href="report-cards.html" class="collapse-item">Report Cards</a>
                         <a href="printables.html" class="collapse-item">Printables</a>
@@ -167,7 +167,7 @@
                     </a>
                     
                     <div class="side-menu-collapse">
-                        <a href="subjects.html" class="collapse-item">Subjects</a>
+                        <a href="subjects.html" class="collapse-item active">Subjects</a>
                         <a href="curriculum.html" class="collapse-item">Curriculum (Grade Level Subjects)</a>
                         <a href="tracks-and-strands.html" class="collapse-item">Tracks and Strands</a>
                         <a href="cards.html" class="collapse-item">Rooms</a>
@@ -243,32 +243,67 @@
                             <a href="registrar.html" class="bread-link">Dashboard</a>
                         </li>
                         <li class="bread-item">
-                            <a href="#" class="bread-link" aria-current="page">Reports & Records Section</a>
+                            <a href="#" class="bread-link" aria-current="page">Basic Education</a>
                         </li>
                         <li class="bread-item">
-                            <span class="bread-link" aria-current="page">Report On Promotions</span>
+                            <span class="bread-link" aria-current="page">Subjects</span>
                         </li>
                     </ol>
-                    <h4>Report On Promotions</h4>
+                    <h4>Subjects</h4>
                 </div>
-
                 <div class="row g-4 mt-4">
-                    <div class="col-xl-6">
-                        <div class="card text-center p-4">
-                            <div class="body">
-                                <div class="font-size-18 font-weight-600">Create Promotional Reports for Elementary</div>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque fuga repellendus similique rem repudiandae nulla nihil quos.</p>
-                                <a href="#" class="button-primary">Generate Elementary Promotions</a>
+                    <div class="col-xl-12">
+                        <form action="">
+                            <div class="row align-items-center justify-content-between g-3">
+                                <div class="col-xl-7">
+                                    <div class="form-group">
+                                        <input type="search" class="form-control" placeholder="Enter subject name">
+                                    </div>
+                                </div>
+                                <div class="col-xl-3">
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option disabled selected>-- Choose Level --</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xl-2">
+                                    <button type="submit" class="button-primary block">Search</button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
-                    <div class="col-xl-6">
-                        <div class="card text-center p-4">
-                            <div class="body">
-                                <div class="font-size-18 font-weight-600">Create Promotional Reports for High School</div>
-                                <p class="text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque fuga repellendus similique rem repudiandae nulla nihil quos.</p>
-                                <a href="#" class="button-primary">Generate High School Promotions</a>
-                            </div>
+                    <div class="col-xl-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped mb-0 background-color-card">
+                                <thead>
+                                    <tr>
+                                        <th>Ref ID</th>
+                                        <th>Subject Code</th>
+                                        <th>Subject Name</th>
+                                        <th>For Subject Area</th>
+                                        <th class="text-center">Units</th>
+                                        <th>Grade Level</th>
+                                        <th class="text-center" width="20%">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>-</td>
+                                        <td>SCI</td>
+                                        <td>Science (Kinder 1)</td>
+                                        <td>-</td>
+                                        <td class="text-center">0</td>
+                                        <td>Kinder 1</td>
+                                        <td>
+                                            <div class="d-flex align-items-center justify-content-center gap-2">
+                                                <a href="" class="button-success block"><span class="material-symbols-rounded">edit</span> Edit</a>
+                                                <button type="button" class="button-danger block"><span class="material-symbols-rounded">delete</span> Delete</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>    
                         </div>
                     </div>
                 </div>
