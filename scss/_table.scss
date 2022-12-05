@@ -6,3 +6,29 @@ td, th {
     color: var(--color-dark);
     vertical-align: middle;
 }
+
+th {
+    font-size: 14px;
+}
+
+td {
+    font-size: 13px;
+}
+
+
+.table-responsive {
+    position: relative;
+    overflow-x: initial;
+
+    @media (max-width: 1400px) {
+        overflow-x: auto;
+    }
+
+    @media (max-width: 768px) {
+        overflow-x: auto;
+    }
+
+    @media (max-width: 567px) {
+        overflow-x: auto;
+    }
+}

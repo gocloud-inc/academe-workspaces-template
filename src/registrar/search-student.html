@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Dashboard - Escuela de Sophia of Caloocan, Inc.</title>
+    <title>Registrar Dashboard | Search Student - Escuela de Sophia of Caloocan, Inc.</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../assets/logo-academe-sms.png" type="image/x-icon">
     <!-- Fonts -->
@@ -76,7 +76,7 @@
                 </li>
                 <li class="side-item-header">Menu</li>
                 <li class="side-item">
-                    <a class="side-link active" href="dashboard.html">
+                    <a class="side-link" href="dashboard.html">
                         <span class="material-symbols-rounded">dashboard</span>
                         <span class="side-text">Dashboard</span>
                     </a>
@@ -114,7 +114,7 @@
                     </a>
                     
                     <div class="side-menu-collapse">
-                        <a href="search-student.html" class="collapse-item">Search Student</a>
+                        <a href="search-student.html" class="collapse-item active">Search Student</a>
                         <a href="officially-enrolled.html" class="collapse-item">Officially Enrolled</a>
                         <a href="avatars.html" class="collapse-item">Registrar Verified</a>
                         <a href="cards.html" class="collapse-item">Enrollees</a>
@@ -241,105 +241,82 @@
                 <div class="bread">
                     <ol class="bread-menu">
                         <li class="bread-item">
-                            <a href="#" class="bread-link">Dashboard</a>
+                            <a href="registrar.html" class="bread-link">Dashboard</a>
                         </li>
                         <li class="bread-item">
-                            <a href="#" class="bread-link" aria-current="page">Boarding</a>
+                            <a href="#" class="bread-link" aria-current="page">School</a>
+                        </li>
+                        <li class="bread-item">
+                            <span class="bread-link" aria-current="page">Search Student</span>
                         </li>
                     </ol>
-                    <h4>Hi, Registrar Head</h4>
+                    <h4>Search Student</h4>
                 </div>
-                <div class="row g-3 mt-4">
-                    <div class="col-xl-3">
-                        <div class="card">
-                            <div class="body">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="initial-circle-md background-accent-primary">
-                                        <span class="material-symbols-rounded text-color-primary">perm_identity</span>
+                <div class="row g-4 mt-4">
+                    <div class="col-xl-12">
+                        <div class="row align-items-center justify-content-between g-3">
+                            <div class="col-xl-8">
+                                <form action="">
+                                    <div class="form-group">
+                                        <input type="search" class="form-control" placeholder="Search student...">
                                     </div>
-                                    <div class="details">
-                                        <div class="font-size-18 font-weight-600">2906</div>
-                                        <div class="font-size-13">Officially Enrolled</div>
-                                    </div>
+                                </form>
+                            </div>
+                            <div class="col-xl-2">
+                                <div class="dropdown">
+                                    <button type="button" role="button" class="button-dark block" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="material-symbols-rounded">filter_list</span>
+                                        Filter By
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Last Name</a></li>
+                                        <li><a class="dropdown-item" href="#">First Name</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-xl-2">
+                                <div class="dropdown">
+                                    <button type="button" role="button" class="button-dark block" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="material-symbols-rounded">sort_by_alpha</span>
+                                        Sort By
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">A</a></li>
+                                        <li><a class="dropdown-item" href="#">B</a></li>
+                                        <li><a class="dropdown-item" href="#">C</a></li>
+                                        <li><a class="dropdown-item" href="#">D</a></li>
+                                        <li><a class="dropdown-item" href="#">E</a></li>
+                                        <li><a class="dropdown-item" href="#">F</a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
-                        <div class="card">
-                            <div class="body">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="initial-circle-md background-accent-danger">
-                                        <span class="material-symbols-rounded text-color-danger">article</span>
-                                    </div>
-                                    <div class="details">
-                                        <div class="font-size-18 font-weight-600">1132</div>
-                                        <div class="font-size-13">Registrar Verified</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3">
-                        <div class="card">
-                            <div class="body">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="initial-circle-md background-accent-warning">
-                                        <span class="material-symbols-rounded">group</span>
-                                    </div>
-                                    <div class="details">
-                                        <div class="font-size-18 font-weight-600">0</div>
-                                        <div class="font-size-13">Enrollees</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3">
-                        <div class="card">
-                            <div class="body">
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="initial-circle-md background-accent-success">
-                                        <span class="material-symbols-rounded text-color-success">chair_alt</span>
-                                    </div>
-                                    <div class="details">
-                                        <div class="font-size-18 font-weight-600">1</div>
-                                        <div class="font-size-13">Applicants</div>
-                                    </div>
-                                </div>
-                            </div>
+                    <div class="col-xl-12">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped mb-0 background-color-card">
+                                <thead>
+                                    <tr>
+                                        <th>Student's Name</th>
+                                        <th>Gender</th>
+                                        <th>Age</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a href="http://" target="_blank" rel="noopener noreferrer">Abad, Jhoaquin James San Miguel</a>
+                                        </td>
+                                        <td>Male</td>
+                                        <td>15</td>
+                                    </tr>
+                                </tbody>
+                            </table>    
                         </div>
                     </div>
                 </div>
             </div>
         </main>
-    </div>
-
-    <!-- Password Modal -->
-    <div class="modal fade" id="passwordModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="passwordModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="passwordModalLabel">Confirm Password</h5>
-                </div>
-                <form action="">
-                    <div class="modal-body">
-                        <div class="row g-4">
-                            <div class="col-xl-12">
-                                <div class="form-group">
-                                    <label for="password" class="form-label">Password</label>
-                                    <input type="password" class="form-control form-input-lg" placeholder="Enter your password">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="button-link-dark round md" data-bs-dismiss="modal">Cancel</button>
-                        <button type="submit" class="button-primary round md">Proceed</button>
-                    </div>
-                </form>
-            </div>
-        </div>
     </div>
 
     <button type="button" class="button-secondary circle md shadow-sm position-fixed bottom-0 right-0 my-5 mx-5 theme-btn-switcher">
