@@ -203,11 +203,12 @@ $default-transition: all 0.2s ease !default;
                 }
                 
                 .side-text {
-                    font-size: 13px;
+                    font-size: 14px;
+                    font-weight: 500;
                 }
 
                 .side-menu-collapse {
-                    display: none;
+                    display: grid;
                     grid-gap: 0.1rem;
                     padding: 2px 0;
                     @extend %scale-up-ver-top;
