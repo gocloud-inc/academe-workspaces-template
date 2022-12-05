@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Dashboard | Applicants - Escuela de Sophia of Caloocan, Inc.</title>
+    <title>Registrar Dashboard | Migrate Students - Escuela de Sophia of Caloocan, Inc.</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../assets/logo-academe-sms.png" type="image/x-icon">
     <!-- Fonts -->
@@ -117,7 +117,7 @@
                         <a href="officially-enrolled.html" class="collapse-item">Officially Enrolled</a>
                         <a href="registrar-verified-students.html" class="collapse-item">Registrar Verified</a>
                         <a href="enrollees.html" class="collapse-item">Enrollees</a>
-                        <a href="applicants.html" class="collapse-item active">Applicants</a>
+                        <a href="applicants.html" class="collapse-item">Applicants</a>
                         <a href="forms.html" class="collapse-item">Unfinished Enrollment</a>
                         <a href="no-section-students.html" class="collapse-item">Students with no Section</a>
                         <a href="assign-students-sections.html" class="collapse-item">Assign Students to Section</a>
@@ -135,7 +135,7 @@
                     </a>
                     
                     <div class="side-menu-collapse">
-                        <a href="migrate-students.html" class="collapse-item">Migrate Students</a>
+                        <a href="migrate-students.html" class="collapse-item active">Migrate Students</a>
                         <a href="alerts.html" class="collapse-item">Upload Student</a>
                         <a href="access-portal-settings.html" class="collapse-item">Access Portal Settings</a>
                     </div>
@@ -243,123 +243,223 @@
                             <a href="registrar.html" class="bread-link">Dashboard</a>
                         </li>
                         <li class="bread-item">
-                            <a href="#" class="bread-link" aria-current="page">Student Section</a>
+                            <a href="#" class="bread-link" aria-current="page">Student Management</a>
                         </li>
                         <li class="bread-item">
-                            <span class="bread-link" aria-current="page">Applicants</span>
+                            <span class="bread-link" aria-current="page">Migrate Students</span>
                         </li>
                     </ol>
-                    <h4>Applicants</h4>
+                    <h4>Migrate Students</h4>
                 </div>
-
                 <div class="row g-4 mt-4">
-                    <div class="col-xl-12">
-                        <form action="">
-                            <div class="card">
-                                <div class="body">
-                                    <div class="font-size-16 font-weight-600 mb-3">Search Applicant</div>
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="body">
+                                <div class="font-size-16 font-weight-600 mb-3">Instructions for Uploading Students:</div>
+                                <ol class="px-4 m-0 d-grid gap-2">
+                                    <li>Must be in 'XLSX' file extension.</li>
+                                    <li>File content must follow the exact format.</li>
+                                    <li>Must not use comma because it serves as the separator of every field.</li>
+                                    <li>Duplicate Students will not be added.</li>
+                                    <li>*Last Name, *First Name, *Grade Level (ex: Grade 6), Track (ex: Academic), Strand (ex: Computer Hardware Servicing (ICT)) and Birthdate (YYYY-MM-DD) are required.</li>
+                                    <li>If any of the Columns above (#5) have blank value, the row will not be saved.</li>
+                                </ol>
+                                <a href="#" class="button-dark mt-3">Download Format</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="body">
+                                <form action="">
                                     <div class="row g-3">
-                                        <div class="col-xl-4">
+                                        <div class="col-xl-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Reference ID" required>
+                                                <label for="file" class="form-label">File</label>
+                                                <input type="file" class="form-control" required>
                                             </div>
                                         </div>
-                                        <div class="col-xl-4">
+                                        <div class="col-xl-12">
                                             <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Last Name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="First Name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
-                                                <input type="date" class="form-control" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
+                                                <label for="school-year" class="form-label">School Year</label>
                                                 <select class="form-control">
-                                                    <option disabled selected>-- Registrar Status --</option>
-                                                    <option value="1">Approved</option>
-                                                    <option value="2">Rejected</option>
-                                                    <option value="3">Pending</option>
-                                                    <option value="4">All</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option disabled selected>-- Grade Levels --</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option disabled selected>-- Is Enrolled? --</option>
-                                                    <option value="all">All</option>
-                                                    <option value="no">No</option>
-                                                    <option value="yes">Yes</option>
+                                                    <option value="1">2022-2023</option>
+                                                    <option value="2">2021-2022</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div class="col-xl-12">
-                                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                                <div class="badge background-color-success round">Current Applicant Total: (1)</div>
-                                                <button type="submit" class="button-primary"><span class="material-symbols-rounded">search</span> Search</button>
+                                            <div class="form-group">
+                                                <label for="semester" class="form-label">Semester</label>
+                                                <select class="form-control">
+                                                    <option value="1">First Semester</option>
+                                                    <option value="2">Second Semester</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-xl-12">
-                        <div class="table-responsive">
-                            <table class="table table-bordered mb-0 background-color-card">
-                                <thead>
-                                    <tr>
-                                        <th>Ref No.</th>
-                                        <th>Name</th>
-                                        <th>Grade Level</th>
-                                        <th>Payment Status</th>
-                                        <th>Date</th>
-                                        <th class="text-center">Track</th>
-                                        <th class="text-center">Strand</th>
-                                        <th class="text-center">Registrar Approval</th>
-                                        <th class="text-center">Enrolled?</th>
-                                        <th class="text-center">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>660693</td>
-                                        <td>Ballesteros, Khyiel Louise V.</td>
-                                        <td>Grade 1</td>
-                                        <td>Unpaid</td>
-                                        <td>08/24/2022</td>
-                                        <td class="text-center">-</td>
-                                        <td class="text-center">-</td>
-                                        <td class="text-center">APPROVED</td>
-                                        <td class="text-center">No</td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <button type="button" role="button" class="button-accent-primary circle sm" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <span class="material-symbols-rounded">more_horiz</span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">account_circle</span> Profile</a></li>
-                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">delete</span> Delete</a></li>
-                                                </ul>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="profile-option" class="form-label">Student Profile Option</label>
+                                                <select class="form-control">
+                                                    <option value="1">If Profile Exist, Update and Re-used profile</option>
+                                                    <option value="1">If Profile Exist, Do not Update and Re-used profile</option>
+                                                    <option value="1">If Profile Exist, Do not save at all</option>
+                                                </select>
                                             </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>    
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="plan-option" class="form-label">Payment Plan Option</label>
+                                                <select class="form-control">
+                                                    <option value="1">Save Payment Plan Column (REQUIRED)</option>
+                                                    <option value="1">Save Payment Plan Column (BUT NOT REQUIRED)</option>
+                                                    <option value="1">Exclude Payment Plan Column (DONT SAVE AT ALL)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="group-option" class="form-label">Payment Group Option</label>
+                                                <select class="form-control">
+                                                    <option value="1">Required Valid Payment Group for the Level</option>
+                                                    <option value="1">Save Payment Group (BUT NOT REQUIRED)</option>
+                                                    <option value="1">Exclude Payment Group</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="section-option" class="form-label">Section Option</label>
+                                                <select class="form-control">
+                                                    <option value="1">Save Section Column (REQUIRED)</option>
+                                                    <option value="1">Save Section Column (BUT NOT REQUIRED)</option>
+                                                    <option value="1">Exclude Section Column (DONT SAVE AT ALL)</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="upload-to" class="form-label">Upload to</label>
+                                                <select class="form-control">
+                                                    <option value="1">Registrar Verified</option>
+                                                    <option value="1">Enrollees</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-check d-flex align-items-center gap-2">
+                                                <input class="form-check-input" type="checkbox" value="" id="gradeLevelUp">
+                                                <label class="form-check-label" for="gradeLevelUp">Increase One Grade Level Up</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <button type="submit" class="button-primary"><span class="material-symbols-rounded">upload</span> Upload Students</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row g-4 mt-4">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="body">
+                                <div class="font-size-16 font-weight-600 mb-3">Instructions for Uploading Student Payment:</div>
+                                <ol class="px-4 m-0 d-grid gap-2">
+                                    <li>Must be in 'XLSX' file extension.</li>
+                                    <li>File content must follow the exact format.</li>
+                                    <li>Must not use comma because it serves as the separator of every field.</li>
+                                    <li>Students must be migrated first.</li>
+                                </ol>
+                                <a href="#" class="button-dark mt-3">Download Format</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="body">
+                                <form action="">
+                                    <div class="row g-3">
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="file" class="form-label">File</label>
+                                                <input type="file" class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="school-year" class="form-label">School Year</label>
+                                                <select class="form-control">
+                                                    <option value="1">2022-2023</option>
+                                                    <option value="2">2021-2022</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="semester" class="form-label">Semester</label>
+                                                <select class="form-control">
+                                                    <option value="1">First Semester</option>
+                                                    <option value="2">Second Semester</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="student-id" class="form-label">Student ID #</label>
+                                                <input type="text" class="form-control" value="A" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="lastname" class="form-label">Last Name</label>
+                                                <input type="text" class="form-control" value="B" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="firstname" class="form-label">First Name</label>
+                                                <input type="text" class="form-control" value="C" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="date-issued" class="form-label">Date Issued</label>
+                                                <input type="text" class="form-control" value="H" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="amount" class="form-label">Amount</label>
+                                                <input type="text" class="form-control" value="J" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="or-number" class="form-label">OR Number</label>
+                                                <input type="text" class="form-control" value="K" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="remark" class="form-label">Remark</label>
+                                                <input type="text" class="form-control" value="M" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <div class="form-group">
+                                                <label for="starting-row" class="form-label">Starting Row</label>
+                                                <input type="number" class="form-control" min="1" value="2" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-12">
+                                            <button type="submit" class="button-primary"><span class="material-symbols-rounded">upload</span> Upload Payments</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

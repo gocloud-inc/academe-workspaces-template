@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registrar Dashboard | Applicants - Escuela de Sophia of Caloocan, Inc.</title>
+    <title>Registrar Dashboard | Printables - Escuela de Sophia of Caloocan, Inc.</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="../../assets/logo-academe-sms.png" type="image/x-icon">
     <!-- Fonts -->
@@ -117,7 +117,7 @@
                         <a href="officially-enrolled.html" class="collapse-item">Officially Enrolled</a>
                         <a href="registrar-verified-students.html" class="collapse-item">Registrar Verified</a>
                         <a href="enrollees.html" class="collapse-item">Enrollees</a>
-                        <a href="applicants.html" class="collapse-item active">Applicants</a>
+                        <a href="applicants.html" class="collapse-item">Applicants</a>
                         <a href="forms.html" class="collapse-item">Unfinished Enrollment</a>
                         <a href="no-section-students.html" class="collapse-item">Students with no Section</a>
                         <a href="assign-students-sections.html" class="collapse-item">Assign Students to Section</a>
@@ -153,7 +153,7 @@
                         <a href="report-on-promotions.html" class="collapse-item">Report on Promotions</a>
                         <a href="cor-bath-print.html" class="collapse-item">COR Batch Print</a>
                         <a href="report-cards.html" class="collapse-item">Report Cards</a>
-                        <a href="printables.html" class="collapse-item">Printables</a>
+                        <a href="printables.html" class="collapse-item active">Printables</a>
                         <a href="download-student-profile.html" class="collapse-item">Download Student Profiles</a>
                     </div>
                 </li>
@@ -243,126 +243,96 @@
                             <a href="registrar.html" class="bread-link">Dashboard</a>
                         </li>
                         <li class="bread-item">
-                            <a href="#" class="bread-link" aria-current="page">Student Section</a>
+                            <a href="#" class="bread-link" aria-current="page">Reports & Records Section</a>
                         </li>
                         <li class="bread-item">
-                            <span class="bread-link" aria-current="page">Applicants</span>
+                            <span class="bread-link" aria-current="page">Printables Excel & PDF</span>
                         </li>
                     </ol>
-                    <h4>Applicants</h4>
+                    <h4>Printables Excel & PDF</h4>
                 </div>
 
-                <div class="row g-4 mt-4">
-                    <div class="col-xl-12">
-                        <form action="">
-                            <div class="card">
-                                <div class="body">
-                                    <div class="font-size-16 font-weight-600 mb-3">Search Applicant</div>
-                                    <div class="row g-3">
-                                        <div class="col-xl-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Reference ID" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="Last Name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control" placeholder="First Name" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
-                                                <input type="date" class="form-control" required>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option disabled selected>-- Registrar Status --</option>
-                                                    <option value="1">Approved</option>
-                                                    <option value="2">Rejected</option>
-                                                    <option value="3">Pending</option>
-                                                    <option value="4">All</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option disabled selected>-- Grade Levels --</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option disabled selected>-- Is Enrolled? --</option>
-                                                    <option value="all">All</option>
-                                                    <option value="no">No</option>
-                                                    <option value="yes">Yes</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="d-flex align-items-center justify-content-between gap-3">
-                                                <div class="badge background-color-success round">Current Applicant Total: (1)</div>
-                                                <button type="submit" class="button-primary"><span class="material-symbols-rounded">search</span> Search</button>
-                                            </div>
-                                        </div>
-                                    </div>
+                <ul class="nav nav-pills nav-fill mt-3 mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-pdf-tab" data-bs-toggle="pill" data-bs-target="#pills-pdf" type="button" role="tab" aria-controls="pills-pdf" aria-selected="true">PDF</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-excel-tab" data-bs-toggle="pill" data-bs-target="#pills-excel" type="button" role="tab" aria-controls="pills-excel" aria-selected="false">Excel</button>
+                    </li>
+                </ul>
+
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-pdf" role="tabpanel" aria-labelledby="pills-pdf-tab" tabindex="0">
+                        <div class="row g-4">
+                            <div class="col-xl-12">
+                                <div class="font-size-18 font-weight-600 mb-3">List of Printable Data in PDF Format</div>
+                                <div class="table-reponsive">
+                                    <table class="table table-bordered background-color-card">
+                                        <thead>
+                                            <tr>
+                                                <th>Type Of Printable</th>
+                                                <th>Description</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Summary Of Enrollment unverified (Elementary)</td>
+                                                <td>This will Show all enrollment summary of all enrolled students verified or unverified by the school registrar.</td>
+                                                <td class="text-center">
+                                                    <a href="#" class="button-dark block"><span class="material-symbols-rounded">print</span> Print</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Summary Of Enrollment unverified (Junior High)</td>
+                                                <td>This will Show all enrollment summary of all enrolled students verified or unverified by the school registrar.</td>
+                                                <td class="text-center">
+                                                    <a href="#" class="button-dark block"><span class="material-symbols-rounded">print</span> Print</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>Summary Of Enrollment unverified (Senior High)</td>
+                                                <td>This will Show all enrollment summary of all enrolled students verified or unverified by the school registrar.</td>
+                                                <td class="text-center">
+                                                    <a href="#" class="button-dark block"><span class="material-symbols-rounded">print</span> Print</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                    <div class="col-xl-12">
-                        <div class="table-responsive">
-                            <table class="table table-bordered mb-0 background-color-card">
-                                <thead>
-                                    <tr>
-                                        <th>Ref No.</th>
-                                        <th>Name</th>
-                                        <th>Grade Level</th>
-                                        <th>Payment Status</th>
-                                        <th>Date</th>
-                                        <th class="text-center">Track</th>
-                                        <th class="text-center">Strand</th>
-                                        <th class="text-center">Registrar Approval</th>
-                                        <th class="text-center">Enrolled?</th>
-                                        <th class="text-center">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>660693</td>
-                                        <td>Ballesteros, Khyiel Louise V.</td>
-                                        <td>Grade 1</td>
-                                        <td>Unpaid</td>
-                                        <td>08/24/2022</td>
-                                        <td class="text-center">-</td>
-                                        <td class="text-center">-</td>
-                                        <td class="text-center">APPROVED</td>
-                                        <td class="text-center">No</td>
-                                        <td class="text-center">
-                                            <div class="dropdown">
-                                                <button type="button" role="button" class="button-accent-primary circle sm" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <span class="material-symbols-rounded">more_horiz</span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">account_circle</span> Profile</a></li>
-                                                    <li><a class="dropdown-item" href="#"><span class="material-symbols-rounded">delete</span> Delete</a></li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>    
+
+                    <div class="tab-pane fade" id="pills-excel" role="tabpanel" aria-labelledby="pills-excel-tab" tabindex="0">
+                        <div class="row g-4">
+                            <div class="col-xl-12">
+                                <div class="font-size-18 font-weight-600 mb-3">List of Downloadable Data in Excel Format</div>
+                                <div class="table-reponsive">
+                                    <table class="table table-bordered background-color-card">
+                                        <thead>
+                                            <tr>
+                                                <th>Type Of Printable</th>
+                                                <th>Description</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Student Insurance Records</td>
+                                                <td>This will direct you to a new page. You can view the list of students and can export it by excel file</td>
+                                                <td class="text-center">
+                                                    <a href="#" class="button-dark block"><span class="material-symbols-rounded">download</span> Download</a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </main>
     </div>
