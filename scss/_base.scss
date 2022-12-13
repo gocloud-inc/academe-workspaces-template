@@ -17,6 +17,10 @@ body {
     line-height: 1.5;
     height: 100vh;
     overflow-x: hidden;
+
+    @media (max-width: 560px) {
+        font-size: 12px;
+    }
 }
 
 // Maps: Heading

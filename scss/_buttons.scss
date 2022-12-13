@@ -61,7 +61,7 @@ $theme-colors: (
 
         i, span {
             font-size: 21px;
-            color: var(--color-#{$color});
+            color: var(--color-#{$color}-shade);
         }
     }
 

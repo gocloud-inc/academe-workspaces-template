@@ -35,7 +35,7 @@ $border-color: 1px solid rgba(var(--color-dark-rgb), 0.1);
 
 .wrapper {
     display: grid;
-    grid-template-columns: 0.1fr 1fr 1.8fr 0.9fr; 
+    grid-template-columns: .1fr 1fr 2.7fr; 
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
         "aside leftbar content rightbar"
@@ -253,7 +253,7 @@ $border-color: 1px solid rgba(var(--color-dark-rgb), 0.1);
 .message-wrapper {
     width: 100%;
     border-radius: 24px;
-    background-color: rgba(var(--color-medium-rgb), 0.4);
+    background-color: rgba(var(--color-medium-rgb), 0.1);
     padding: 8px 18px; /* the container will keep the padding untouched */
     max-height: 145px; /* added padding to the height of the .message-text */
     

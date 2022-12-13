@@ -8,11 +8,11 @@ td, th {
 }
 
 th {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 td {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 
@@ -31,4 +31,8 @@ td {
     @media (max-width: 567px) {
         overflow-x: auto;
     }
+}
+
+.table-highlighted {
+    background: rgba(var(--color-primary-rgb), 0.1);
 }

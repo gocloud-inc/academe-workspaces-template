@@ -4,7 +4,7 @@
             border-bottom: 1px solid rgba(var(--color-medium-rgb), 0.4);
         }
         .modal-content {
-            background: var(--color-light);
+            background: var(--color-card);
             border-radius: 20px;
         }
         .modal-footer {
@@ -15,10 +15,10 @@
 
 .offcanvas {
     .offcanvas-header {
-        background: var(--color-light);
+        background: var(--color-card);
     }
 
     .offcanvas-body {
-        background: var(--color-light);
+        background: var(--color-card);
     }
 }

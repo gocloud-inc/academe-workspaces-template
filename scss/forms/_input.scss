@@ -17,6 +17,11 @@
         color: var(--color-dark);
         border-color: rgba(var(--color-primary-rgb), 0.9);
     }
+
+    &:disabled {
+        background: rgba(var(--color-medium-rgb), 0.1) !important;
+        pointer-events: none;
+    }
 }
 
 input[type=date] {
@@ -24,19 +29,10 @@ input[type=date] {
 }
 
 .form-input, .form-control {
-
     @extend %input-default;
 
     &::-ms-expand {
         display: none;
-    }
-}
-
-select {
-    color: var(--color-dark);
-    
-    option {
-        height: 100px;
     }
 }
 
@@ -49,6 +45,7 @@ textarea {
 label, .form-label {
     position: relative;
     font-size: 14px;
+    font-weight: 500;
 }
 
 .form {
@@ -138,3 +135,12 @@ label, .form-label {
     color: rgba(var(--color-dark-rgb), 0.8);
 }
 
+
+// Error Handling
+.form-invalid {
+    border-color: rgba(var(--color-danger-rgb), 0.7);
+    
+    &:hover, &:focus {
+        border-color: rgba(var(--color-danger-rgb), 0.7);
+    }
+}
